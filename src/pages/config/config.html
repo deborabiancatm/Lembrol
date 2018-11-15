@@ -1,0 +1,91 @@
+<!--
+  Generated template for the ConfigPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="orange">
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    <ion-title>Configurações</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-list-header>
+      NOTIFICAÇÕES
+    </ion-list-header>
+
+    <ion-item>
+        <ion-label>Horário</ion-label>
+        <ion-select (ionChange)="monthChange($event)" multiple="true" cancelText="Cancelar" okText="Confirmar">
+          <ion-option value="01">00:00</ion-option>
+          <ion-option value="02">01:00</ion-option>
+          <ion-option value="03">02:00</ion-option>
+          <ion-option value="04">03:00</ion-option>
+          <ion-option value="05">04:00</ion-option>
+          <ion-option value="06">05:00</ion-option>
+          <ion-option value="07">06:00</ion-option>
+          <ion-option value="08">07:00</ion-option>
+          <ion-option value="09">08:00</ion-option>
+          <ion-option value="10">09:00</ion-option>
+          <ion-option value="11">10:00</ion-option>
+          <ion-option value="12">11:00</ion-option>
+          <ion-option value="13" selected="true">12:00</ion-option>
+          <ion-option value="14">13:00</ion-option>
+          <ion-option value="15">14:00</ion-option>
+          <ion-option value="16">15:00</ion-option>
+          <ion-option value="17">16:00</ion-option>
+          <ion-option value="18">17:00</ion-option>
+          <ion-option value="19">18:00</ion-option>
+          <ion-option value="20">19:00</ion-option>
+          <ion-option value="21">20:00</ion-option>
+          <ion-option value="22">21:00</ion-option>
+          <ion-option value="23">22:00</ion-option>
+          <ion-option value="24">23:00</ion-option>
+        </ion-select>
+      </ion-item>
+
+    <ion-item>
+      <ion-label>Ativar som</ion-label>
+      <ion-toggle></ion-toggle>
+    </ion-item>
+    <ion-item>
+      <ion-label>Ativar vibração</ion-label>
+      <ion-toggle></ion-toggle>
+    </ion-item>
+  </ion-list>
+
+  <ion-list>
+    <ion-list-header>
+      Anotações
+    </ion-list-header>
+    <ion-item>
+        <button ion-button clear>Excluir todas as anotações</button>
+    </ion-item>
+    <ion-item>
+        <button ion-button clear>Excluir todas as anotações arquivadas</button>
+    </ion-item>
+  </ion-list>
+
+  <ion-list>
+    <ion-list-header>
+      TAGS
+    </ion-list-header>
+    <ion-item>
+        <button ion-button clear>Excluir todas as tags</button>
+    </ion-item>
+    <ion-item>
+        <button ion-button clear>Editar tags</button>
+    </ion-item>
+  </ion-list>
+   
+  <ion-list>
+    <button ion-button clear>Restaurar Configurações</button>
+  </ion-list>
+</ion-content>
