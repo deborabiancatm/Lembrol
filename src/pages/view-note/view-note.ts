@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { NoteService } from '../../providers/note-service/note-service';
 import { Note } from '../../models/note.model';
 
+@IonicPage()
 @Component({
   selector: 'page-view-note',
   templateUrl: 'view-note.html',
