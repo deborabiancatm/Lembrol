@@ -11,7 +11,11 @@ import { ConfigPage } from './../pages/config/config';
 import { LoginPage } from '../pages/login/login';
 import { RegisterPage } from '../pages/register/register';
 import { FIREBASE_CONFIG } from './app.firebase.config';
-
+import { AddNotePage } from '../pages/add-note/add-note';
+import { NoteService } from '../providers/note-service/note-service';
+import { IonicStorageModule } from '@ionic/storage';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ViewNotePage } from '../pages/view-note/view-note';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
@@ -22,13 +26,18 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     ListPage,
     LoginPage,
     RegisterPage,
-    ConfigPage
+    ConfigPage,
+    AddNotePage,
+    ViewNotePage
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
     AngularFireModule.initializeApp(FIREBASE_CONFIG),
-    AngularFireAuthModule
+    AngularFireAuthModule,
+    IonicStorageModule.forRoot(),
+    FormsModule,
+    ReactiveFormsModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -37,12 +46,15 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     ListPage,
     LoginPage,
     RegisterPage,
-    ConfigPage
+    ConfigPage,
+    AddNotePage,
+    ViewNotePage
   ],
   providers: [
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
+    NoteService
   ]
 })
 export class AppModule {}
