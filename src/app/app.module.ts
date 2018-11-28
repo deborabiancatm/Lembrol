@@ -11,7 +11,7 @@ import { ConfigPage } from './../pages/config/config';
 import { LoginPage } from '../pages/login/login';
 import { RegisterPage } from '../pages/register/register';
 import { FIREBASE_CONFIG } from './app.firebase.config';
-import { AddNotePage } from '../pages/add-note/add-note';
+import { AddNotePage } from '../pages/add-note/add-notes';
 import { NoteService } from '../providers/note-service/note-service';
 import { IonicStorageModule } from '@ionic/storage';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -53,7 +53,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
     NoteService
   ]
 })
