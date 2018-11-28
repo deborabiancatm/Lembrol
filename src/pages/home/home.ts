@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams,  ToastController} from 'ionic-angular';
 import { AngularFireAuth } from "angularfire2/auth"
-import { AddNotePage } from '../add-note/add-note';
+import { AddNotePage } from '../add-note/add-notes';
 import { NoteService } from '../../providers/note-service/note-service';
 import { Note } from '../../models/note.model';
 import { ViewNotePage } from '../view-note/view-note';
