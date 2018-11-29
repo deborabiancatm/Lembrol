@@ -1,30 +1,27 @@
 <ion-header>
 
-    <ion-navbar>
-      <ion-title>Add Note</ion-title>
-    </ion-navbar>
-  
-  </ion-header>
-  
-  
-  <ion-content padding>
-    <form [formGroup]="formGroup" (ngSubmit)="saveNote(formGroup.value)">
-      <ion-item>
-        <ion-label>Date</ion-label>
-        <ion-datetime displayFormat="MM/DD/YYYY" formControlName="date"></ion-datetime>
-      </ion-item>
-      <ion-item>
-        <ion-label>Title</ion-label>
-        <ion-input type="text" name="title" formControlName="title" required></ion-input>
-        <div class="alert" *ngIf="!formGroup.controls['title'].valid
-          && formGroup.controls['title'].touched">{{ titleAlert }}</div>
-      </ion-item>
-      <ion-item>
-        <ion-label>Note</ion-label>
-        <ion-input type="text" name="content" formControlName="content" required></ion-input>
-        <div class="alert" *ngIf="!formGroup.controls['content'].valid
-          && formGroup.controls['content'].touched">{{ contentAlert }}</div>
-      </ion-item>
-      <button ion-button type="submit" [disabled]="!formGroup.valid">Save Note</button>
-    </form>
-  </ion-content>
+  <ion-navbar color="orange">
+    <ion-title>Nova Anotação</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+  <form [formGroup]="formGroup" (ngSubmit)="saveNote(formGroup.value)">
+    <ion-item>
+      <ion-input placeholder="Título" type="text" name="title" formControlName="title" required></ion-input>
+      <div class="alert" *ngIf="!formGroup.controls['title'].valid
+        && formGroup.controls['title'].touched">{{ tagAlert }}</div>
+    </ion-item>
+    <ion-item>
+      <ion-label><ion-icon name="ios-calendar-outline" item-start></ion-icon>Data</ion-label>
+      <ion-datetime displayFormat="DD/MM/YYYY" formControlName="date"></ion-datetime>
+     </ion-item>
+     <ion-item>
+      <ion-textarea  placeholder="Nota" rows="20" type="text" name="content" formControlName="content" required></ion-textarea>
+      <div class="alert" *ngIf="!formGroup.controls['content'].valid
+        && formGroup.controls['content'].touched">{{ contentAlert }}</div>
+     </ion-item>
+     <button block ion-button type="submit" [disabled]="!formGroup.valid">Salvar Anotação</button>
+  </form>
+</ion-content>

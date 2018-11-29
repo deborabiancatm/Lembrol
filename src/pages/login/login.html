@@ -1,24 +1,25 @@
 <ion-header>
-  <ion-navbar color="primary">
-    <ion-title>Lembrol</ion-title>
-  </ion-navbar>
+  
 
 </ion-header>
 
 
-<ion-content padding>
-
-<ion-item>
-  <ion-label floating>E-mail</ion-label>
-  <ion-input type="text" [(ngModel)]="user.email"></ion-input>
-</ion-item>
-
-<ion-item>
-  <ion-label floating>Senha</ion-label>
-  <ion-input type="password" [(ngModel)]="user.password"></ion-input>
-</ion-item>
-
-<button ion-button (click)="login(user)">Login</button>
-<button ion-button color="light" (click)="register()">Cadastrar</button>
-
+<ion-content padding class="page-home">
+  <img style="display: block; position: relative; margin-left: auto; margin-right: auto; margin-top: 25px;" src="../../assets/imgs/logo.png">
+  <ion-badge class="boxmain">
+    <ion-badge class="box-login">
+      <ion-item>
+      <ion-label floating>E-mail</ion-label>
+      <ion-input type="text" [(ngModel)]="user.email"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label floating>Senha</ion-label>
+      <ion-input type="password" [(ngModel)]="user.password"></ion-input>
+    </ion-item>
+    </ion-badge>
+    <button ion-button block color="orange" (click)="login(user)">Login</button>
+    <button ion-button block color="orange" outline (click)="register()">Cadastrar</button>  
+  </ion-badge>
+  <ion-footer>© 2018 - Chical Corp</ion-footer>
 </ion-content>
