@@ -1,7 +1,10 @@
 <ion-header>
   <ion-navbar>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
     <ion-title>
-      My Notes
+      Minhas Notas
     </ion-title>
   </ion-navbar>
 </ion-header>
@@ -13,5 +16,5 @@
       {{ note.title }}
     </button>
   </ion-list>
-  <button ion-button (click)="addNote()">Add Note</button>
+  <button ion-button (click)="addNote()">Adicionar Nota</button>
 </ion-content>
